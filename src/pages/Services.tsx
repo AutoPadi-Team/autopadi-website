@@ -178,17 +178,16 @@ export const Services = () => {
 
       <main className="flex-grow">
         <div className="bg-blue-700 text-white py-20 px-10">
-            <h1 className="text-4xl font-bold text-center mb-4">
-              Our Services
-            </h1>
-            <p className="text-xl text-center max-w-3xl mx-auto mb-12">
-              Comprehensive automotive solutions tailored to your needs. Quality
-              service you can trust.
-            </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            Our Services
+          </h1>
+          <p className="text-xl text-center max-w-3xl mx-auto mb-12">
+            Connects drivers with trusted mechanics and provides access to
+            emergency help-right from your phone.
+          </p>
         </div>
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {allServices.map((service, index) => (
                 <div

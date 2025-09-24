@@ -14,7 +14,6 @@ export const Testimonial = ({ quote, author, role }: TestimonialProps) => {
         </div>
         <div>
           <p className="font-semibold">{author}</p>
-          <p className="text-gray-500 text-sm">{role}</p>
         </div>
       </div>
     </div>

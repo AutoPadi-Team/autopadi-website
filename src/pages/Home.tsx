@@ -1,3 +1,4 @@
+import { TbPackages } from "react-icons/tb"; 
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ServiceCard } from "../components/ServiceCard";
@@ -6,9 +7,9 @@ import { Testimonial } from "../components/Testimonial";
 export const Home = () => {
   const services = [
     {
-      title: "Emergency Roadside Assistance",
+      title: "Grow Business",
       description:
-        "24/7 help when you need it most. Flat tires, dead batteries, lockouts, and more.",
+        "Grow your business and expand customer base through increased visibility.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,9 +28,9 @@ export const Home = () => {
       ),
     },
     {
-      title: "Vehicle Maintenance",
+      title: "Digital Tools",
       description:
-        "Regular maintenance to keep your vehicle running smoothly and prevent costly repairs.",
+        "Get access to digital tools for your services and payment processing.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -48,25 +49,11 @@ export const Home = () => {
       ),
     },
     {
-      title: "Professional Driving Services",
+      title: "Subscription Plans",
       description:
-        "Need a driver? We provide professional drivers for all occasions.",
+        "You can easily offer Subscription plans to your customers to ensure steady income.",
       icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
-          />
-        </svg>
+        <TbPackages className="size-8" />
       ),
     },
   ];
@@ -76,19 +63,16 @@ export const Home = () => {
       quote:
         "Saved me when my battery died at 2 AM. Fast response and professional service!",
       author: "Uncle Fii",
-      role: "Local Mechanic Owner",
     },
     {
       quote:
         "Their regular maintenance plan has kept my car running like new for years.",
       author: "Michael Boadu",
-      role: "Satisfied Customer",
     },
     {
       quote:
-        "Used their driver service for a corporate event. Punctual and professional.",
-      author: "David Wilson",
-      role: "Range Rover Mechanic",
+        "Used their mechanic service for a corporate event. Punctual and professional.",
+      author: "David Tekpernor",
     },
   ];
 
@@ -101,11 +85,12 @@ export const Home = () => {
         <section className="bg-blue-700 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Professional Auto Care Services
+              Simplifying Auto Care Anytime, Anywhere
             </h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Reliable mechanics and professional drivers when you need them
-              most. Available 24/7 for your convenience.
+              AutoPadi is a mobile platform that Connects drivers with trusted
+              mechanics and provides access to emergency help-right from your
+              phone.
             </p>
             <div className="space-x-4">
               <a
@@ -128,7 +113,7 @@ export const Home = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Our Services
+              Mechanics & other Service Providers
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (

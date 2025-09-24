@@ -6,8 +6,8 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">AutoPadi</h3>
             <p className="text-gray-300">
-              Professional mechanic and driver services for all your automotive
-              needs.
+              Connects drivers with trusted mechanics and provides access to
+              emergency help-right from your phone.
             </p>
           </div>
 
@@ -48,8 +48,12 @@ export const Footer = () => {
             <address className="text-gray-300 not-italic">
               <p>Airport </p>
               <p>ALX Building</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: autopadi@gmail.com</p>
+              <p>
+                Phone: <a href="tel:+233554369966">+233 55 436 9966</a>
+              </p>
+              <p>
+                Email: <a href="mailto:info@autopadi.org">info@autopadi.org</a>
+              </p>
             </address>
           </div>
         </div>
