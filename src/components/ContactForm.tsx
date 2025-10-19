@@ -18,18 +18,18 @@ export const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will contact you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission
+  //   console.log("Form submitted:", formData);
+  //   alert("Thank you for your message! We will contact you soon.");
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     message: "",
+  //   });
+  // };
 
   return (
     <form

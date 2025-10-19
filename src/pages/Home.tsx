@@ -4,7 +4,7 @@ import { TbPackages } from "react-icons/tb";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ServiceCard } from "../components/ServiceCard";
-import { Testimonial } from "../components/Testimonial";
+// import { Testimonial } from "../components/Testimonial";
 import AppStore from "../assets/app-store.svg";
 import PlayStore from "../assets/play-store.svg";
 import Intro from "../assets/intro.png";
@@ -70,26 +70,26 @@ export const Home = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      quote:
-        "Saved me when my battery died at 2 AM. Fast response and professional service!",
-      author: "Uncle Fii",
-      role: "",
-    },
-    {
-      quote:
-        "Their regular maintenance plan has kept my car running like new for years.",
-      author: "Michael Boadu",
-      role: "",
-    },
-    {
-      quote:
-        "Used their mechanic service for a corporate event. Punctual and professional.",
-      author: "David Tekpernor",
-      role: "",
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     quote:
+  //       "Saved me when my battery died at 2 AM. Fast response and professional service!",
+  //     author: "Uncle Fii",
+  //     role: "",
+  //   },
+  //   {
+  //     quote:
+  //       "Their regular maintenance plan has kept my car running like new for years.",
+  //     author: "Michael Boadu",
+  //     role: "",
+  //   },
+  //   {
+  //     quote:
+  //       "Used their mechanic service for a corporate event. Punctual and professional.",
+  //     author: "David Tekpernor",
+  //     role: "",
+  //   },
+  // ];
 
   const frequentlyQuestions = [
     {

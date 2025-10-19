@@ -15,6 +15,9 @@ export const Testimonial = ({ quote, author, role }: TestimonialProps) => {
         <div>
           <p className="font-semibold">{author}</p>
         </div>
+        <div>
+          <p className="font-light text-slate-500">{role}</p>
+        </div>
       </div>
     </div>
   );

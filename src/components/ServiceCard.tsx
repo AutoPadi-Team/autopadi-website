@@ -1,7 +1,7 @@
 interface ServiceCardProps {
   title: string;
   description: string;
-  icon: JSX.Element;
+  icon: any;
 }
 
 export const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
