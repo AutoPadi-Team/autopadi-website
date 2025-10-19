@@ -172,7 +172,7 @@ export const Home = () => {
                     <span>Connect to your personal mechanic</span>
                   </li>
                 </ul>
-                <a href="">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVgSweMaeO4Glm3vbMAHGL7gsHbRWuXBBeim6dkC0LIyn3UA/viewform">
                   <button className="py-2 px-4 mt-4 text-white rounded-lg bg-blue-700 hover:bg-blue-800 cursor-pointer">
                     Join Our Waitlist
                   </button>
