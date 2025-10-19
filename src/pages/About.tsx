@@ -1,6 +1,6 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import Story from "../assets/story.png"
+import Story from "../assets/story.jpeg"
 
 export const About = () => {
   const testimonials = [
