@@ -25,10 +25,9 @@ export const Contact = () => {
               <div className="md:w-1/2">
                 <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
                 <p className="text-gray-600 mb-8">
-                  Whether you need emergency roadside assistance, want to
-                  schedule maintenance, or need a professional driver, our team
-                  is ready to help. Fill out the form and we'll get back to you
-                  promptly.
+                  Whether you need emergency roadside assistance or want to
+                  schedule maintenance, our Application is ready to help. Fill
+                  out the form for any help and we'll get back to you promptly.
                 </p>
 
                 <div className="space-y-6">
@@ -51,10 +50,7 @@ export const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                      <p className="text-gray-600">(123) 456-7890</p>
-                      <p className="text-gray-500 text-sm">
-                        24/7 Emergency Line
-                      </p>
+                      <p className="text-gray-600">+233 55 436 9966</p>
                     </div>
                   </div>
 
@@ -77,7 +73,7 @@ export const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-1">Email</h3>
-                      <p className="text-gray-600">autopadi@gmail.com</p>
+                      <p className="text-gray-600">info@autopadi.org</p>
                       <p className="text-gray-500 text-sm">
                         Typically respond within 24 hours
                       </p>
@@ -139,12 +135,6 @@ export const Contact = () => {
                       <p className="text-gray-600">
                         Monday - Friday: 8:00 AM - 6:00 PM
                       </p>
-                      <p className="text-gray-600">
-                        Saturday: 9:00 AM - 4:00 PM
-                      </p>
-                      <p className="text-gray-600">
-                        Sunday: Emergency services only
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -167,7 +157,7 @@ export const Contact = () => {
           <div className="container mx-auto px-4">
             <div className="rounded-lg overflow-hidden shadow-md">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256018042!2d-73.9878446845938!3d40.7484404793279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMTkuNyJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5079999999997!2d-0.1673186845938!3d5.6053179793279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9b7c5d5f5a5f%3A0x5e5a5e5a5e5a5e5a!2sKotoka%20International%20Airport%20(ACC)!5e0!3m2!1sen!2sgh!4v1620000000000!5m2!1sen!2sgh"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}

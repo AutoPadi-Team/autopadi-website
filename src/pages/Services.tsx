@@ -1,20 +1,19 @@
+import { MdOutlineEmergencyShare } from "react-icons/md"; 
+import { GiMechanicGarage } from "react-icons/gi"; 
+import { MdWorkspacePremium } from "react-icons/md"; 
+import { TbPackages } from "react-icons/tb"; 
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ServiceCard } from "../components/ServiceCard";
+import AppStore from "../assets/app-store.svg";
+import PlayStore from "../assets/play-store.svg";
 
 export const Services = () => {
-  const allServices = [
+  const services = [
     {
-      title: "Emergency Roadside Assistance",
+      title: "Grow Business",
       description:
-        "24/7 help when you need it most. Our team will come to your location to assist with:",
-      details: [
-        "Jump starts for dead batteries",
-        "Flat tire changes",
-        "Lockout services (keys locked in vehicle)",
-        "Fuel delivery when you run out",
-        "Minor mechanical adjustments",
-      ],
+        "Grow your business and expand customer base through increased visibility.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -33,16 +32,9 @@ export const Services = () => {
       ),
     },
     {
-      title: "Preventive Maintenance",
+      title: "Digital Tools",
       description:
-        "Keep your vehicle running smoothly with our comprehensive maintenance services:",
-      details: [
-        "Oil changes and fluid checks",
-        "Tire rotations and balancing",
-        "Brake inspections and service",
-        "Battery testing and replacement",
-        "Filter replacements",
-      ],
+        "Get access to digital tools for your services and payment processing.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -61,114 +53,27 @@ export const Services = () => {
       ),
     },
     {
-      title: "Diagnostic Services",
+      title: "Subscription Plans",
       description:
-        "Advanced diagnostics to identify and resolve vehicle issues:",
-      details: [
-        "Engine light diagnostics",
-        "Computer system scans",
-        "Electrical system testing",
-        "Performance issues diagnosis",
-        "Emissions testing",
-      ],
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-          />
-        </svg>
-      ),
+        "You can easily offer Subscription plans to your customers to ensure steady income.",
+      icon: <TbPackages className="size-8" />,
     },
     {
-      title: "Professional Driving Services",
-      description: "Need a driver? We provide professional drivers for:",
-      details: [
-        "Corporate events and meetings",
-        "Airport transfers",
-        "Special occasions (weddings, proms)",
-        "Designated driver service",
-        "Long-distance trips",
-      ],
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
-          />
-        </svg>
-      ),
+      title: "Premium Mechanics",
+      description: "Convenient access to trusted mechanics.",
+      icon: <MdWorkspacePremium className="size-8" />,
     },
     {
-      title: "Vehicle Inspections",
-      description: "Comprehensive inspections for peace of mind:",
-      details: [
-        "Pre-purchase inspections",
-        "Annual safety inspections",
-        "Used vehicle evaluations",
-        "Fleet vehicle inspections",
-        "Custom inspection packages",
-      ],
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-          />
-        </svg>
-      ),
+      title: "Personal Mechanics",
+      description:
+        "Connect with your personal Mechanic for Simplified Auto services.",
+      icon: <GiMechanicGarage className="size-8" />,
     },
     {
-      title: "Fleet Services",
-      description: "Specialized services for businesses with vehicle fleets:",
-      details: [
-        "Scheduled maintenance programs",
-        "On-site fleet servicing",
-        "Driver training programs",
-        "Fuel management solutions",
-        "Custom service agreements",
-      ],
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8 16l-1.447-.724a1 1 0 01-.553-.894V6.236a1 1 0 011.447-.894L8 8l5.553-2.764a1 1 0 011.447.894v8.144a1 1 0 01-.553.894L13 16l-5.553 2.764a1 1 0 01-1.447-.894V16z"
-          />
-        </svg>
-      ),
+      title: "Emergency Support",
+      description:
+        "Peace of mind with emergency support & easy payment options.",
+      icon: <MdOutlineEmergencyShare className="size-8" />,
     },
   ];
 
@@ -187,24 +92,36 @@ export const Services = () => {
           </p>
         </div>
         <section className="py-16 bg-gray-50">
+          {/* mechanic service */}
           <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Mechanics & other Service Providers
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allServices.map((service, index) => (
-                <div
+              {services.slice(0, 3).map((service, index) => (
+                <ServiceCard
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="text-blue-700 mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
-                    {service.details.map((detail, i) => (
-                      <li key={i}>{detail}</li>
-                    ))}
-                  </ul>
-                </div>
+                  title={service.title}
+                  description={service.description}
+                  icon={service.icon}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* driver service */}
+          <div className="container mx-auto px-4 pt-16">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Vehicle Owners & Drivers
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.slice(3, 6).map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  title={service.title}
+                  description={service.description}
+                  icon={service.icon}
+                />
               ))}
             </div>
           </div>
@@ -216,15 +133,28 @@ export const Services = () => {
               Need Immediate Assistance?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Our emergency roadside assistance is available 24/7 to get you
-              back on the road quickly and safely.
+              Our emergency mechanics are available 24/7 to get you back on the
+              road quickly and safely on AutoPadi.
             </p>
-            <a
-              href="tel:+1234567890"
-              className="bg-white text-blue-700 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors duration-300 inline-block"
-            >
-              Call Now: (123) 456-7890
-            </a>
+
+            <p className="text-xl mb-8 max-w-2xl mx-auto font-semibold">
+              Coming soon on....
+            </p>
+
+            <div className="flex justify-center">
+              <div className="flex space-x-3 -mt-16">
+                <img
+                  src={PlayStore}
+                  alt="play store"
+                  className="size-36 p-0 cursor-pointer"
+                />
+                <img
+                  src={AppStore}
+                  alt="play store"
+                  className="size-36 p-0 cursor-pointer"
+                />
+              </div>
+            </div>
           </div>
         </section>
       </main>

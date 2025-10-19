@@ -32,7 +32,11 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form
+      className="space-y-4"
+      action="https://formsubmit.co/info@autopadi.org"
+      method="POST"
+    >
       <div>
         <label htmlFor="name" className="block text-gray-700 mb-1">
           Name
@@ -94,7 +98,7 @@ export const ContactForm = () => {
 
       <button
         type="submit"
-        className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-[#1e40af] transition-colors duration-300"
+        className="cursor-pointer bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-[#1e40af] transition-colors duration-300"
       >
         Send Message
       </button>

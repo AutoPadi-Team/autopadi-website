@@ -1,7 +1,51 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import Story from "../assets/story.png"
 
 export const About = () => {
+  const testimonials = [
+    {
+      description:
+        "Oversees overall strategy and direction. Makes key decisions that impact the company's growth and success.",
+      author: "Eddie Tekpenor",
+      role: "Founder & CEO of AutoPadi",
+    },
+    {
+      description: "Ensures the company runs smoothly and efficiently.",
+      author: "Eugenia Ohenewa Amadi",
+      role: "Administrator & Operations Manager",
+    },
+    {
+      description:
+        "Designs, develops, and maintains the server-side logic, database integration, and API connectivity for the platform",
+      author: "George Accam Buertey",
+      role: "Software Engineer(Backend)",
+    },
+    {
+      description:
+        "Creates user-centered designs that are intuitive and engaging. Develops visually appealing designs that align with the company's brand",
+      author: "Michael Dei",
+      role: "UI/UX Designer",
+    },
+    {
+      description:
+        "Develops and maintains the mobile applications, ensuring seamless user experience and integration with backend services.",
+      author: "Joseph Eshun",
+      role: "Software Engineer(Frontend)",
+    },
+    {
+      description:
+        "Develops and maintains the mobile applications, ensuring seamless user experience and integration with backend services.",
+      author: "Godfred Boateng",
+      role: "Software Engineer(Frontend)",
+    },
+    {
+      description:
+        "Provides expert advice and guidance to the team. Offers strategic guidance to help the company achieve its goals.",
+      author: "Shadrach Dameteye",
+      role: "Mentor & Advisor",
+    },
+  ];
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -11,11 +55,10 @@ export const About = () => {
         <section className="bg-blue-700 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About ProAutoCare
+              About AutoPadi
             </h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Your trusted partner for automotive services and professional
-              driving solutions.
+              Making life easier for Mechanics & Drivers
             </p>
           </div>
         </section>
@@ -26,28 +69,28 @@ export const About = () => {
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/2">
                 <img
-                  src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  src={Story}
                   alt="Our Team"
                   className="rounded-lg shadow-md w-full h-auto"
                 />
               </div>
               <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+                <h2 className="text-3xl font-bold mb-6">Our Motive</h2>
                 <p className="text-gray-600 mb-4">
-                  Founded in 2010, ProAutoCare began as a small auto repair shop
-                  with a commitment to honest service and customer satisfaction.
-                  Over the years, we've expanded our services to meet the
-                  growing needs of our community.
+                  At AutoPadi, we're passionate about keeping you moving.
+                  Founded on the principles of reliability, convenience, and
+                  trust, our platform connects drivers with top-rated mechanics
+                  and emergency roadside services.
                 </p>
                 <p className="text-gray-600 mb-4">
-                  What started as a one-mechanic operation has grown into a
-                  full-service automotive solution provider, offering everything
-                  from routine maintenance to emergency roadside assistance and
-                  professional driving services.
+                  Whether you need a routine tune-up, we're here to help. Our
+                  mission is to provide fast, affordable, and professional
+                  automotive solutions that give you peace of mind on the road.
                 </p>
                 <p className="text-gray-600">
-                  Our mission remains the same: to provide reliable,
-                  professional service you can trust at fair prices.
+                  With AutoPadi, you're not just getting a service - you're
+                  getting a partner who cares about your safety and
+                  satisfaction.
                 </p>
               </div>
             </div>
@@ -60,59 +103,23 @@ export const About = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-gray-200 rounded-full h-32 w-32 mx-auto mb-4 overflow-hidden">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/32.jpg"
-                    alt="John Smith"
-                    className="h-full w-full object-cover"
-                  />
+              {testimonials.map((item) => (
+                <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                  <div className="flex justify-center">
+                    <p className="bg-blue-700 rounded-full text-center flex items-center justify-center text-white text-5xl size-30 overflow-hidden mx-auto mb-4">
+                      {item.author.charAt(0).toUpperCase()}
+                      {item.author.charAt(1).toUpperCase()}
+                    </p>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-1">{item.author}</h3>
+                  <p className="text-blue-700 font-medium mb-3">
+                    {item.role}
+                  </p>
+                  <p className="text-gray-600">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold mb-1">John Smith</h3>
-                <p className="text-blue-700 font-medium mb-3">
-                  Founder & Lead Mechanic
-                </p>
-                <p className="text-gray-600">
-                  With over 20 years of experience, John ensures every repair
-                  meets our high standards.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-gray-200 rounded-full h-32 w-32 mx-auto mb-4 overflow-hidden">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/44.jpg"
-                    alt="Maria Garcia"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold mb-1">Maria Garcia</h3>
-                <p className="text-blue-700 font-medium mb-3">
-                  Service Manager
-                </p>
-                <p className="text-gray-600">
-                  Maria coordinates all our services and ensures every customer
-                  receives exceptional care.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-gray-200 rounded-full h-32 w-32 mx-auto mb-4 overflow-hidden">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/75.jpg"
-                    alt="David Johnson"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold mb-1">David Johnson</h3>
-                <p className="text-blue-700 font-medium mb-3">
-                  Head of Driving Services
-                </p>
-                <p className="text-gray-600">
-                  David oversees our professional driving team, ensuring safety
-                  and reliability.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -140,10 +147,9 @@ export const About = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Quality</h3>
+                <h3 className="text-xl font-semibold mb-2">Convenience</h3>
                 <p className="text-gray-600">
-                  We stand behind our work with industry-leading warranties and
-                  guarantees.
+                  Easier to get your car service at your convenience.
                 </p>
               </div>
 

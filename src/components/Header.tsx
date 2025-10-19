@@ -77,7 +77,7 @@ export const Header = () => {
         </div>
 
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3 transition-width duration-300 ease-in-out">
+          <div className="md:hidden mt-4 pb-4 space-y-3 transition-all duration-300 ease-in-out">
             <Link
               to="/"
               className="block text-gray-700 hover:text-blue-700 font-medium"

@@ -1,10 +1,24 @@
-import { TbPackages } from "react-icons/tb"; 
+import { RiMedalLine } from "react-icons/ri";
+import { AiOutlinePlus } from "react-icons/ai";
+import { TbPackages } from "react-icons/tb";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ServiceCard } from "../components/ServiceCard";
 import { Testimonial } from "../components/Testimonial";
+import AppStore from "../assets/app-store.svg";
+import PlayStore from "../assets/play-store.svg";
+import Intro from "../assets/intro.png";
+import Driver from "../assets/driver.png";
+import Mechanic from "../assets/mechanic.png";
+import { useState } from "react";
 
 export const Home = () => {
+  const [isOpen, setIsOpen] = useState(0);
+
+  const handleToggle = (action: number) => {
+    setIsOpen(action);
+  };
+
   const services = [
     {
       title: "Grow Business",
@@ -52,9 +66,7 @@ export const Home = () => {
       title: "Subscription Plans",
       description:
         "You can easily offer Subscription plans to your customers to ensure steady income.",
-      icon: (
-        <TbPackages className="size-8" />
-      ),
+      icon: <TbPackages className="size-8" />,
     },
   ];
 
@@ -63,16 +75,36 @@ export const Home = () => {
       quote:
         "Saved me when my battery died at 2 AM. Fast response and professional service!",
       author: "Uncle Fii",
+      role: "",
     },
     {
       quote:
         "Their regular maintenance plan has kept my car running like new for years.",
       author: "Michael Boadu",
+      role: "",
     },
     {
       quote:
         "Used their mechanic service for a corporate event. Punctual and professional.",
       author: "David Tekpernor",
+      role: "",
+    },
+  ];
+
+  const frequentlyQuestions = [
+    {
+      question: "Is there a cost to join AutoPadi?",
+      answer:
+        "Mechanics can join for free; freemium and subscription plans are available for vehicle owners.",
+    },
+    {
+      question: "How are mechanics verified?",
+      answer:
+        "We conduct thorough background checks and require certifications.",
+    },
+    {
+      question: "Can I cancel my subscription?",
+      answer: "Yes, subscriptions can be canceled or modified at any time.",
     },
   ];
 
@@ -92,6 +124,7 @@ export const Home = () => {
               mechanics and provides access to emergency help-right from your
               phone.
             </p>
+
             <div className="space-x-4">
               <a
                 href="/services"
@@ -105,6 +138,53 @@ export const Home = () => {
               >
                 Contact Us
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Wait list */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row justify-center items-center md:items-start space-y-8 md:space-y-0 md:space-x-14">
+              <div className="text-center md:text-left my-20 md:w-2/4 w-fit">
+                <h2 className="text-3xl font-bold mb-4">
+                  Join the AutoPadi Community Today!
+                </h2>
+                <p className="text-2xl mb-4">
+                  Experience the AutoPadi difference and discover a new way to
+                  get your vehicle serviced. With our platform, you can:
+                </p>
+                <ul className="text-slate-600">
+                  <li className="mb-2 flex items-start">
+                    <RiMedalLine className="text-blue-700 mr-6 mt-1" />
+                    <span>Book services through our mobile app</span>
+                  </li>
+                  <li className="mb-2 flex items-start">
+                    <RiMedalLine className="text-blue-700 mr-6 mt-1" />
+                    <span>Track the status of your service in real-time</span>
+                  </li>
+                  <li className="mb-2 flex items-start">
+                    <RiMedalLine className="text-blue-700 mr-6 mt-1" />
+                    <span>Subscribe to maintenance plan at any time</span>
+                  </li>
+                  <li className="mb-2 flex items-start">
+                    <RiMedalLine className="text-blue-700 mr-6 mt-1" />
+                    <span>Connect to your personal mechanic</span>
+                  </li>
+                </ul>
+                <a href="">
+                  <button className="py-2 px-4 mt-4 text-white rounded-lg bg-blue-700 hover:bg-blue-800 cursor-pointer">
+                    Join Our Waitlist
+                  </button>
+                </a>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center">
+                <img
+                  src={Intro}
+                  alt=""
+                  className="w-fit h-auto object-cover "
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -136,6 +216,18 @@ export const Home = () => {
           </div>
         </section>
 
+        {/* AutoPadi UI */}
+        <section className="py-16 bg-gray-50">
+          <div className="flex justify-center">
+            <div className="">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <img src={Driver} alt="driver" />
+                <img src={Mechanic} alt="mechanic" />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Testimonials */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -155,6 +247,41 @@ export const Home = () => {
           </div>
         </section>
 
+        {/* FAQ */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Frequently asked questions
+            </h2>
+            <div className="flex justify-center">
+              <div className="items-center">
+                {frequentlyQuestions.map((item, index) => (
+                  <div
+                    onClick={() => handleToggle(index)}
+                    className="w-[100%] bg-slate-100 my-10 py-2 px-4 rounded-2xl shadow shadow-blue-100 hover:shadow-md hover:shadow-blue-100 hover:border hover:border-blue-600 cursor-pointer"
+                  >
+                    <div className="flex space-x-20 justify-between font-semibold text-2xl">
+                      {item.question}
+                      <AiOutlinePlus className="size-6 ml-10 md:ml-80 mt-1" />
+                    </div>
+                    {isOpen === index && (
+                      <p
+                        className={`mx-1 my-2 transition-all duration-300 ease-in-out ${
+                          isOpen === index
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 -translate-y-full"
+                        }`}
+                      >
+                        {item.answer}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="bg-[#1e40af] text-white py-16">
           <div className="container mx-auto px-4 text-center">
@@ -162,15 +289,29 @@ export const Home = () => {
               Ready to Experience Our Services?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Contact us today to schedule an appointment or request emergency
-              assistance.
+              Download our AutoPadi and enjoy the best service and maintenance
+              plans from our mechanics today and also connect with your personal
+              mechanic.
             </p>
-            <a
-              href="/contact"
-              className="bg-white text-[#1e40af] px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors duration-300 inline-block"
-            >
-              Get in Touch
-            </a>
+
+            <p className="text-xl mb-8 max-w-2xl mx-auto font-semibold">
+              Coming soon on....
+            </p>
+
+            <div className="flex justify-center">
+              <div className="flex space-x-3 -mt-16">
+                <img
+                  src={PlayStore}
+                  alt="play store"
+                  className="size-36 p-0 cursor-pointer"
+                />
+                <img
+                  src={AppStore}
+                  alt="play store"
+                  className="size-36 p-0 cursor-pointer"
+                />
+              </div>
+            </div>
           </div>
         </section>
       </main>
