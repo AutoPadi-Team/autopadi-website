@@ -229,7 +229,7 @@ export const Home = () => {
         </section>
 
         {/* Testimonials */}
-        <section className="py-16">
+        {/* <section className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
               What Our Customers Say
@@ -245,7 +245,7 @@ export const Home = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* FAQ */}
         <section className="py-16">
